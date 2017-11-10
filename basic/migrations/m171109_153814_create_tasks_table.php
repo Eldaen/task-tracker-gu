@@ -26,7 +26,7 @@ class m171109_153814_create_tasks_table extends Migration
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),
             'deadline' => $this->integer()->notNull(),
-            'completion_time' => $this->integer()->notNull(),
+            'completion_time' => $this->integer(),
             'team_id' => $this->integer()->notNull()
         ], $tableOptions);
     }
