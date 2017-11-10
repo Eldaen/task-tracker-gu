@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - tasksdb@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="tasksdb">
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="db"/>
+    <schema id="4" parent="1" name="eg_db"/>
+    <schema id="5" parent="1" name="employees"/>
+    <schema id="6" parent="1" name="fishing"/>
+    <schema id="7" parent="1" name="geodata"/>
+    <schema id="8" parent="1" name="gu_php_test"/>
+    <schema id="9" parent="1" name="gu_sturdy"/>
+    <schema id="10" parent="1" name="hags_db"/>
+    <schema id="11" parent="1" name="information_schema"/>
+    <schema id="12" parent="1" name="mysql"/>
+    <schema id="13" parent="1" name="performance_schema"/>
+    <schema id="14" parent="1" name="shop_db_2"/>
+    <schema id="15" parent="1" name="sys"/>
+    <schema id="16" parent="1" name="yii2advanced"/>
+    <schema id="17" parent="1" name="yii2basic"/>
+  </database-model>
+</dataSource>
