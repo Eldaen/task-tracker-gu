@@ -18,10 +18,10 @@ class m171110_112016_add_basic_data extends Migration
                 'description' => 'Ребята, которые рабаотают над Frontend-ом, очень стараются.'
             ]);
         $this->insert('{{%teams}}',
-            [
-                'name' => 'Вторая команда',
-                'description' => 'Тут дела Backend-ные, всё важно и по взрослому.'
-            ]);
+        [
+            'name' => 'Вторая команда',
+            'description' => 'Тут дела Backend-ные, всё важно и по взрослому.'
+        ]);
     }
 
     /**
