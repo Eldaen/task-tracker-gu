@@ -22,6 +22,7 @@ class m171109_153814_create_tasks_table extends Migration
             'id' => $this->primaryKey(),
             'title' => $this->string()->notNull(),
             'body' => $this->text()->notNull(),
+            'status' => $this->integer(),
             'creator_id' => $this->integer()->notNull(),
             'created_at' => $this->integer()->notNull(),
             'updated_at' => $this->integer()->notNull(),

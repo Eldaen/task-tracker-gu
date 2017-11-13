@@ -69,8 +69,7 @@ class TasksController extends Controller
         $teams = (new Teams())::find()->asArray()->all();
         //если не залогинен по какой-то причине, то ставим флеш
 
-        $model->created_at = time();
-        $model->updated_at = time();
+        $model->status = 1;
 
         //TODO:: убрать вот, после введения прав доступа
         if(!Yii::$app->user->isGuest)
@@ -99,7 +98,6 @@ class TasksController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $model->updated_at = time();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);

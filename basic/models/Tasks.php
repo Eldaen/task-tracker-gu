@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
 
 /**
  * This is the model class for table "tasks".
@@ -16,6 +17,7 @@ use Yii;
  * @property integer $deadline
  * @property integer $completion_time
  * @property integer $team_id
+ ** @property integer $status
  *
  * @property Users $creator
  * @property Teams $team
@@ -27,7 +29,7 @@ class Tasks extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'tasks';
+        return '{{%tasks}}';
     }
 
     /**
@@ -36,9 +38,9 @@ class Tasks extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'body', 'creator_id', 'created_at', 'updated_at', 'deadline', 'completion_time', 'team_id'], 'required'],
+            [['title', 'body', 'status', 'creator_id', 'deadline', 'team_id'], 'required'],
             [['body'], 'string'],
-            [['creator_id', 'created_at', 'updated_at', 'deadline', 'completion_time', 'team_id'], 'integer'],
+            [['creator_id', 'status', 'created_at', 'updated_at', 'team_id'], 'integer'],
             [['title'], 'string', 'max' => 255],
             [['creator_id'], 'exist', 'skipOnError' => true, 'targetClass' => Users::className(), 'targetAttribute' => ['creator_id' => 'id']],
             [['team_id'], 'exist', 'skipOnError' => true, 'targetClass' => Teams::className(), 'targetAttribute' => ['team_id' => 'id']],
@@ -62,6 +64,14 @@ class Tasks extends \yii\db\ActiveRecord
             'team_id' => 'Team',
         ];
     }
+
+    public function behaviors()
+    {
+        return [
+            TimestampBehavior::className(),
+        ];
+    }
+
 
     /**
      * @return \yii\db\ActiveQuery

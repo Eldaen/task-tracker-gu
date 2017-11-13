@@ -13,7 +13,7 @@ class TasksReport extends Tasks
 {
     public function getAll()
     {
-        //TODO: возвращает все таски
+        return static::find()->all();
     }
     public function getClosed()
     {
