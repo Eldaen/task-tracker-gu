@@ -24,8 +24,18 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'team_id',
-            'user_id',
+            [
+                'attribute' => 'Username',
+                'value'     => function ($searchModel) {
+                    return \app\models\Users::findOne(['id' => $searchModel->user_id])->username;
+                },
+            ],
+            [
+                'attribute' => 'Team',
+                'value'     => function ($searchModel) {
+                    return \app\models\Teams::findOne(['id' => $searchModel->team_id])->name;
+                },
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

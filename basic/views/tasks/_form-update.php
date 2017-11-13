@@ -20,6 +20,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'deadline')->input('date', ['value' => date('Y-m-d', $model->deadline)]) ?>
 
+    <? //TODO:: вот тут надо бы чтобы по дефолту открывалось заданное значение, но что-то пока не осенило ?>
     <?= $form->field($model, 'team_id')
         ->dropDownList(['1' => 'Открытое', '0' => 'Закрытое'])
      ?>
