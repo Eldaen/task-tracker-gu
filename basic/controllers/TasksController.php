@@ -5,7 +5,7 @@ namespace app\controllers;
 use app\models\Teams;
 use Yii;
 use app\models\Tasks;
-use app\modelsTasksSearch;
+use app\models\TasksSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -36,7 +36,7 @@ class TasksController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new modelsTasksSearch();
+        $searchModel = new TasksSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [

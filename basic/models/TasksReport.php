@@ -17,10 +17,10 @@ class TasksReport extends Tasks
     }
     public function getClosed()
     {
-        //TODO: возвращает все закрытые таски
+        return static::find()->where(['status' => 0])->all();
     }
     public function getOverdue()
     {
-        //TODO: возвращает все просроченые таски за период
+        return static::find()->where(['>', 'deadline', time()])->all();
     }
 }

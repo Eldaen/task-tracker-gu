@@ -1,6 +1,6 @@
 <?php
 
-namespace app;
+namespace app\models;
 
 use Yii;
 use yii\base\Model;
@@ -10,7 +10,7 @@ use app\models\Tasks;
 /**
  * modelsTasksSearch represents the model behind the search form about `app\models\Tasks`.
  */
-class modelsTasksSearch extends Tasks
+class tasksSearch extends Tasks
 {
     /**
      * @inheritdoc
@@ -18,8 +18,9 @@ class modelsTasksSearch extends Tasks
     public function rules()
     {
         return [
-            [['id', 'creator_id', 'created_at', 'updated_at', 'deadline', 'completion_time', 'team_id'], 'integer'],
+            [['id', 'creator_id', 'created_at', 'updated_at', 'deadline', 'completion_time', 'team_id', 'status'], 'integer'],
             [['title', 'body'], 'safe'],
+            [['creator'], 'string']
         ];
     }
 
@@ -66,6 +67,7 @@ class modelsTasksSearch extends Tasks
             'deadline' => $this->deadline,
             'completion_time' => $this->completion_time,
             'team_id' => $this->team_id,
+            'status' => $this->status
         ]);
 
         $query->andFilterWhere(['like', 'title', $this->title])

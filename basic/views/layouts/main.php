@@ -38,6 +38,7 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
+            ['label' => 'Report', 'url' => ['/stats-report/index']],
             ['label' => 'Tasks', 'url' => ['/tasks/index']],
             ['label' => 'Teams', 'url' => ['/teams/index']],
             ['label' => 'Team-binds', 'url' => ['/team-binds/index']],

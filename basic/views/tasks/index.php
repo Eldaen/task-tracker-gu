@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\modelsTasksSearch */
+/* @var $searchModel app\tasksSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Tasks';
@@ -27,8 +27,16 @@ $this->params['breadcrumbs'][] = $this->title;
             'id',
             'title',
             'body:ntext',
-            'creator_id',
+            //TODO: понять, почему пропадает поиск по юзеру в GridView и что можно придумать
+            //TODO: да и время можно бы переводить в читаемое
+            [
+                'attribute' => 'Creator',
+                'value'     => function ($searchModel) {
+                    return \app\models\Users::findOne(['id' => $searchModel->creator_id])->username;
+                },
+            ],
             'created_at',
+            'status',
             // 'updated_at',
             // 'deadline',
             // 'completion_time:datetime',

@@ -18,5 +18,12 @@ class StatsReportController extends Controller
         $allTasks = $tasks->getAll();
         $closedTasks = $tasks->getClosed();
         $overdueTasks = $tasks->getOverdue();
+
+        return $this->render('index',
+            [
+                'allTasks' => $allTasks,
+                'closedTasks' => $closedTasks,
+                'overdueTasks' => $overdueTasks
+            ]);
     }
 }

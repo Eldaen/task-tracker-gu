@@ -58,7 +58,7 @@
     </column>
     <column id="29" parent="19" name="status">
       <Position>4</Position>
-      <DataType>smallint(2)|0</DataType>
+      <DataType>int(11)|0</DataType>
     </column>
     <column id="30" parent="19" name="creator_id">
       <Position>5</Position>
