@@ -38,8 +38,13 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
+            ['label' => 'Report', 'url' => ['/admin/stats-report/index']],
+            ['label' => 'Tasks', 'url' => ['/admin/tasks/index']],
+            ['label' => 'Teams', 'url' => ['/admin/teams/index']],
+            ['label' => 'Team-binds', 'url' => ['/admin/team-binds/index']],
+            ['label' => 'Users', 'url' => ['/admin/users/index']],
+            ['label' => 'Rbac', 'url' => ['/rbac/default/index']],
 
-            ['label' => 'Одминка(dev)', 'url' => ['/admin/stats-report/index']],
             //TODO: что-то не понял как собрать то что ниже в одну тернарную конструкцию
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]

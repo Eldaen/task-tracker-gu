@@ -6,8 +6,8 @@ class ReportCest
 {
     public function _before(AcceptanceTester $I)
     {
-        $I->amOnPage('/index.php?r=stats-report%2Findex'); // так работает
-        // $I->amOnPage(Url::toRoute('stats-report/index'));  // а вот так не хочет, зараза
+        //$I->amOnPage('/index.php?r=stats-report%2Findex'); // так работает
+         $I->amOnPage(Url::toRoute('stats-report/index'));  // а вот так не хочет, зараза
     }
     
     public function reportPageWorks(AcceptanceTester $I)

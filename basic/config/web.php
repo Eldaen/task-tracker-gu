@@ -10,7 +10,28 @@ $config = [
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
-        '@npm'   => '@vendor/npm-asset',
+        '@npm' => '@vendor/npm-asset',
+    ],
+    'modules' => [
+        'rbac' => [
+            'class' => 'mdm\admin\Module',
+            'controllerMap' => [
+                'assignment' => [
+                    'class' => 'mdm\admin\controllers\AssignmentController',
+                    'userClassName' => 'app\models\User',
+                    'idField' => 'id',
+                    'usernameField' => 'username'
+                ],
+            ],
+            'layout' => 'left-menu',
+            'mainLayout' => '@app//modules/admin/views/layouts/admin.php',
+        ],
+        'admin' =>
+        [
+            'class' => '\app\modules\admin\Module',
+            'layout' => 'admin',
+            'defaultRoute' => 'stats-report/index'
+        ]
     ],
     'components' => [
         'request' => [
@@ -22,6 +43,7 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
+            'loginUrl' => ['site/login'],
             'enableAutoLogin' => true,
         ],
         'errorHandler' => [
@@ -44,16 +66,25 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
+
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
             ],
         ],
-        */
+
+        'authManager' => [
+            'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\DbManager'
+        ]
     ],
     'params' => $params,
+    'as access' => [
+        'class' => 'mdm\admin\components\AccessControl',
+        'allowActions' => [
+            'site/*'
+        ]
+    ],
 ];
 
 if (YII_ENV_DEV) {

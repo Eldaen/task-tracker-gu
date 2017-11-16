@@ -8,6 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $model app\models\Tasks */
 /* @var $form yii\widgets\ActiveForm */
 /* @var $teams array */
+/* @var $users array */
 ?>
 
 <div class="tasks-form">
@@ -18,12 +19,14 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'body')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'deadline')->input('date', ['value' => date('Y-m-d', $model->deadline)]) ?>
+    <?= $form->field($model, 'deadline')->input('date') ?>
 
-    <? //TODO:: вот тут надо бы чтобы по дефолту открывалось заданное значение, но что-то пока не осенило ?>
     <?= $form->field($model, 'team_id')
-        ->dropDownList(['1' => 'Открытое', '0' => 'Закрытое'])
-     ?>
+        ->dropDownList(ArrayHelper::map($teams, 'id', 'name')
+    ) ?>
+    <?= $form->field($model, 'executor_id')
+        ->dropDownList(ArrayHelper::map($users, 'id', 'username')
+        ) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

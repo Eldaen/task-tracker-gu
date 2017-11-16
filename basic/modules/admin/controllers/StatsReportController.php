@@ -6,7 +6,7 @@
  * Time: 20:17
  */
 
-namespace app\controllers;
+namespace app\modules\admin\controllers;
 use app\models\TasksReport;
 use yii\web\Controller;
 

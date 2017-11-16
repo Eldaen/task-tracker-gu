@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
-/* @var $searchModel app\tasksSearch */
+/* @var $searchModel app\models\tasksSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Tasks';
@@ -33,6 +33,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'Creator',
                 'value'     => function ($searchModel) {
                     return \app\models\Users::findOne(['id' => $searchModel->creator_id])->username;
+                },
+            ],
+            [
+                'attribute' => 'Executor',
+                'value'     => function ($searchModel) {
+                    return \app\models\Users::findOne(['id' => $searchModel->executor_id])->username;
                 },
             ],
             'created_at',

@@ -17,7 +17,8 @@ use yii\behaviors\TimestampBehavior;
  * @property integer $deadline
  * @property integer $completion_time
  * @property integer $team_id
- ** @property integer $status
+ * @property integer $status
+ * @property integer $executor_id
  *
  * @property Users $creator
  * @property Teams $team
@@ -38,11 +39,12 @@ class Tasks extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'body', 'status', 'creator_id', 'deadline', 'team_id'], 'required'],
+            [['title', 'body', 'status', 'executor_id', 'creator_id', 'deadline', 'team_id'], 'required'],
             [['body'], 'string'],
-            [['creator_id', 'status', 'created_at', 'updated_at', 'team_id'], 'integer'],
+            [['creator_id', 'status', 'executor_id', 'created_at', 'updated_at', 'team_id'], 'integer'],
             [['title'], 'string', 'max' => 255],
             [['creator_id'], 'exist', 'skipOnError' => true, 'targetClass' => Users::className(), 'targetAttribute' => ['creator_id' => 'id']],
+            [['executor_id'], 'exist', 'skipOnError' => true, 'targetClass' => Users::className(), 'targetAttribute' => ['executor_id' => 'id']],
             [['team_id'], 'exist', 'skipOnError' => true, 'targetClass' => Teams::className(), 'targetAttribute' => ['team_id' => 'id']],
         ];
     }
@@ -60,6 +62,7 @@ class Tasks extends \yii\db\ActiveRecord
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'deadline' => 'Deadline',
+            'executor_id' => 'Executor',
             'completion_time' => 'Completion Time',
             'team_id' => 'Team',
         ];
