@@ -1,14 +1,14 @@
 <?php
 namespace app\models;
 
-use yii\db\ActiveRecord;
+use yii\base\Model;
 
 /**
  * Login form
  */
-class CompleteTaskForm extends ActiveRecord
+class CompleteTaskForm extends Model
 {
-    public $message;
+    public $completion_message;
 
     /**
      * @inheritdoc
@@ -16,8 +16,27 @@ class CompleteTaskForm extends ActiveRecord
     public function rules()
     {
         return [
-            [['message'], 'string'],
-            [['message'],'filter','filter'=>'\yii\helpers\HtmlPurifier::process']
+            [['completion_message'], 'string'],
+            [['completion_message'],'filter','filter'=>'\yii\helpers\HtmlPurifier::process']
         ];
+    }
+
+    public function attributeLabels()
+    {
+        return
+        [
+            'completion_message' => 'Сообщение'
+        ];
+    }
+
+
+    public function save($id)
+    {
+        $task = (new Tasks)->find()->where(['id' => $id])->one();
+        $task->completion_message = $this->completion_message;
+        $task->completion_time = time();
+        $task->status = 0;
+        return $task->save() ? true : false;
+        //return   && $task->status = 0 && $task->save() ? true : false;
     }
 }

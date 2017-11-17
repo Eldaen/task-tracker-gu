@@ -13,6 +13,7 @@ use app\models\CompleteTaskForm;
 use app\models\Tasks;
 use Yii;
 use yii\filters\AccessControl;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\HttpException;
 
@@ -54,21 +55,19 @@ class TasksController extends Controller
 
     public function actionView($id)
     {
-        $task = Tasks::find()->where(['id' => $id])->one();
-        if($task->status == 1)
-        {
-            $view = 'incompleteTask';
-            $model = new CompleteTaskForm();
-            if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                return $this->goBack();
-            }
-        } else {
-            $view = 'completeTask';
+        $model = new CompleteTaskForm();
+        if ($model->load(Yii::$app->request->post())) {
+            $model->save($id);
+            //TODO: можно setFlash сделать
+            $this->redirect(Url::toRoute('tasks/index'));
         }
+        $task = Tasks::find()->where(['id' => $id])->one();
+        $view = $task->status == 1 ? 'incompleteTask' : 'completeTask';
 
         return $this->render($view,
             [
-                'task' => $task
+                'task' => $task,
+                'model' => $model
             ]);
     }
 }

@@ -16,6 +16,7 @@ use yii\behaviors\TimestampBehavior;
  * @property integer $updated_at
  * @property integer $deadline
  * @property integer $completion_time
+ * @property integer $completion_message
  * @property integer $team_id
  * @property integer $status
  * @property integer $executor_id
@@ -40,7 +41,7 @@ class Tasks extends \yii\db\ActiveRecord
     {
         return [
             [['title', 'body', 'status', 'executor_id', 'creator_id', 'deadline', 'team_id'], 'required'],
-            [['body'], 'string'],
+            [['body', 'completion_message'], 'string'],
             [['creator_id', 'status', 'executor_id', 'created_at', 'updated_at', 'team_id'], 'integer'],
             [['title'], 'string', 'max' => 255],
             [['creator_id'], 'exist', 'skipOnError' => true, 'targetClass' => Users::className(), 'targetAttribute' => ['creator_id' => 'id']],
@@ -64,6 +65,7 @@ class Tasks extends \yii\db\ActiveRecord
             'deadline' => 'Deadline',
             'executor_id' => 'Executor',
             'completion_time' => 'Completion Time',
+            'completion_message' => 'Completion Message',
             'team_id' => 'Team',
         ];
     }
@@ -97,8 +99,11 @@ class Tasks extends \yii\db\ActiveRecord
     {
         //TODO: проверить, что это работает корректно
         //Преобразуем input type="date" в юникс
-        $array = explode('-', $this->deadline);
-        $this->deadline = mktime(0, 0, 0, $array[1], $array[2], $array[0]);
+        if(preg_match('/.*-.*/', $this->deadline))
+        {
+            $array = explode('-', $this->deadline);
+            $this->deadline = mktime(0, 0, 0, $array[1], $array[2], $array[0]);
+        }
         return parent::beforeSave($insert);
     }
 
