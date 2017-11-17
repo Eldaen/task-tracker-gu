@@ -102,5 +102,29 @@ class Tasks extends \yii\db\ActiveRecord
         return parent::beforeSave($insert);
     }
 
+    //Получает все таски, которые выполняет юзер с переданным id
+    public function getActiveByUserId($user_id)
+    {
+        return static::find()->where(
+            [
+                'executor_id' => $user_id,
+                'status' => 1
+            ])->all();
+    }
+
+    //Получает таск с переданным id
+
+    /**
+     * @param integer $task_id the task ID
+     */
+    public function getById($task_id)
+    {
+        return static::find()->where(
+            [
+                'id' => $task_id
+            ]
+        )->one();
+    }
+
 
 }
