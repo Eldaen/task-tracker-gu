@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     return \app\models\Users::findOne(['id' => $searchModel->executor_id])->username;
                 },
             ],
-            'created_at',
+            'created_at:datetime',
             'status',
             // 'updated_at',
             // 'deadline',
