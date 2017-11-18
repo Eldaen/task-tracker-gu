@@ -39,6 +39,7 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
 
+            ['label' => 'Команды', 'url' => ['/team/index']],
             ['label' => 'Задачи', 'url' => ['/tasks/index']],
             ['label' => 'Одминка(dev)', 'url' => ['/admin/stats-report/index']],
             //TODO: что-то не понял как собрать то что ниже в одну тернарную конструкцию
@@ -48,7 +49,7 @@ AppAsset::register($this);
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
+                    'Logout (' . HTML::encode(Yii::$app->user->identity->username) . ')',
                     ['class' => 'btn btn-link logout']
                 )
                 . Html::endForm()
