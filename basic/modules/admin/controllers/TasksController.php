@@ -68,8 +68,8 @@ class TasksController extends Controller
         $model = new Tasks();
 
         //Получаем данные для соответсвия id - название
-        $teams = (new Teams())::find()->asArray()->all();
-        $users = (new Users())::find()->asArray()->all();
+        $teams = Teams::find()->asArray()->all();
+        $users = Users::find()->asArray()->all();
 
         //раз создали, то по дефолту открытое
         $model->status = 1;
@@ -102,7 +102,7 @@ class TasksController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $users = (new Users())::find()->asArray()->all();
+        $users = Users::find()->asArray()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);

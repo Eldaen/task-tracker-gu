@@ -32,7 +32,7 @@ class CompleteTaskForm extends Model
 
     public function save($id)
     {
-        $task = (new Tasks)->find()->where(['id' => $id])->one();
+        $task = Tasks::find()->where(['id' => $id])->one();
         $task->completion_message = $this->completion_message;
         $task->completion_time = time();
         $task->status = 0;

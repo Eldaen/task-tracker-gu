@@ -68,8 +68,8 @@ class TeamBindsController extends Controller
     {
         $model = new TeamBinds();
 
-        $teams = (new Teams())::find()->asArray()->all();
-        $users = (new Users())::find()->asArray()->all();
+        $teams = Teams::find()->asArray()->all();
+        $users = Users::find()->asArray()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'team_id' => $model->team_id, 'user_id' => $model->user_id]);
@@ -92,8 +92,8 @@ class TeamBindsController extends Controller
     public function actionUpdate($team_id, $user_id)
     {
         $model = $this->findModel($team_id, $user_id);
-        $teams = (new Teams())::find()->asArray()->all();
-        $users = (new Users())::find()->asArray()->all();
+        $teams = Teams::find()->asArray()->all();
+        $users = Users::find()->asArray()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'team_id' => $model->team_id, 'user_id' => $model->user_id]);
