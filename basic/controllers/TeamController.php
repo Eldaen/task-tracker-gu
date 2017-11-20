@@ -47,17 +47,10 @@ class TeamController extends Controller
     {
         //Получаем id всех команд, к которым принадлежит юзер
         $teams = TeamBinds::find()->where(['user_id' => Yii::$app->user->identity->getId()])->all();
-        $teamsArray = [];
-
-       foreach ($teams as $item)
-       {
-           //кладём в массив команды, к которым принадлежит юзер
-           array_push($teamsArray, Teams::find()->where(['id' => $item->team_id])->one());
-       }
 
         return $this->render('teamList',
             [
-               'teams' => $teamsArray
+               'teams' => $teams
             ]);
     }
 
@@ -75,7 +68,7 @@ class TeamController extends Controller
         return $this->render('view',
             [
                'team' => $team,
-               'users' => $usersArray
+               'users' => $users
             ]);
     }
 }

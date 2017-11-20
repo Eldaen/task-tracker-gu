@@ -31,7 +31,10 @@ $config = [
             'class' => '\app\modules\admin\Module',
             'layout' => 'admin',
             'defaultRoute' => 'stats-report/index'
-        ]
+        ],
+        /*'utility' => [
+            'class' => 'c006\utility\migration\Module',
+        ],*/
     ],
     'components' => [
         'request' => [

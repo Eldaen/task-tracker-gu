@@ -6,7 +6,6 @@ use yii\helpers\Html;
 $this->title = "Ваши комманды";
 $this->params['breadcrumbs'][] = $this->title;
 
-
 ?>
 
 <h1><?= Html::encode($this->title) ?></h1>
@@ -16,10 +15,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <? //TODO:: http://www.webapplex.ru/postranichnaya-navigacziya-v-yii-2.x ?>
     <div class="list-group">
         <? foreach ($teams as $item) : ?>
-            <a href="<?= \yii\helpers\Url::to(['team/view', 'id' => $item->id])?>" class="list-group-item">
+            <a href="<?= \yii\helpers\Url::to(['team/view', 'id' => $item->team->id])?>" class="list-group-item">
                 <div class="row">
-                    <div class="col-md-6"><h4 class="list-group-item-heading"><?=HTML::encode($item->name)?></h4>
-                        <p class="list-group-item-text"><?=HTML::encode(\yii\helpers\StringHelper::truncate($item->description, 255))?></p></div>
+                    <div class="col-md-6"><h4 class="list-group-item-heading"><?=HTML::encode($item->team->name)?></h4>
+                        <p class="list-group-item-text"><?=HTML::encode(\yii\helpers\StringHelper::truncate($item->team->description, 255))?></p></div>
                     <?php //TODO:: доделать тут вывод данных о тасках deadline ?>
                     <div class="col-md-6"></div>
                 </div>

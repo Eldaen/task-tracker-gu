@@ -22,8 +22,8 @@ $this->params['breadcrumbs'][] = $this->title;
         <? foreach ($users as $item) : ?>
             <a href="#" class="list-group-item">
                 <div class="row">
-                    <div class="col-md-6"><h4 class="list-group-item-heading"><?=HTML::encode($item->username)?></h4>
-                        <p class="list-group-item-text">ID: <?=HTML::encode($item->id)?></p></div>
+                    <div class="col-md-6"><h4 class="list-group-item-heading"><?=HTML::encode($item->user->username)?></h4>
+                        <p class="list-group-item-text">ID: <?=HTML::encode($item->user->id)?></p></div>
                     <div class="col-md-6">Здесь должна бы быть какая-то инфа о пользователе, его аватарка итд, но пока что-то нет.</div>
                 </div>
             </a>
