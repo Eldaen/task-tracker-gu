@@ -4,6 +4,8 @@ namespace app\models;
 
 use Yii;
 use yii\behaviors\TimestampBehavior;
+use yii\helpers\StringHelper;
+use yii\helpers\Url;
 
 /**
  * This is the model class for table "tasks".
@@ -26,6 +28,32 @@ use yii\behaviors\TimestampBehavior;
  */
 class Tasks extends \yii\db\ActiveRecord
 {
+    const EVENT_TASK_CREATED = 'Добавлена новая задача';
+
+    public function telegramInform($event)
+    {
+        $user = TelegramSubscribe::find()
+            ->where(['id_user' => $event->sender->executor_id])
+            ->one();
+
+        if($user)
+        {
+            $message = 'У вас новая задача!' . PHP_EOL . PHP_EOL;
+            $message .= 'Заголовок: ' . $event->sender->title . PHP_EOL;
+            $message .= 'Описание: ' . StringHelper::truncate($event->sender->body, 100, '...') . PHP_EOL;
+            $message .= 'Подробнее читайте по ссылке - ' . Url::toRoute(['@web/tasks/view', 'id' => $event->sender->id], true) . PHP_EOL;
+
+            return Yii::$app->bot->sendMessage($user->id_telegram_user, $message);
+        } else {
+            return false;
+        }
+    }
+    public function init(){
+
+        $this->on(self::EVENT_TASK_CREATED, [$this, 'telegramInform']);
+
+    }
+
     /**
      * @inheritdoc
      */

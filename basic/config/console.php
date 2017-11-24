@@ -2,6 +2,7 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
+$token = require __DIR__. '/telegram_token.php';
 
 $config = [
     'id' => 'basic-console',
@@ -22,6 +23,10 @@ $config = [
                     'levels' => ['error', 'warning'],
                 ],
             ],
+        ],
+        'bot' => [
+            'class' => 'SonkoDmitry\Yii\TelegramBot\Component',
+            'apiToken' => $token,
         ],
         'db' => $db,
     ],

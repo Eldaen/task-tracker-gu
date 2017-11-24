@@ -44,4 +44,9 @@ class TelegramSubscribe extends \yii\db\ActiveRecord
             'id_event' => 'Id Event',
         ];
     }
+
+    public function getUser()
+    {
+        return $this->hasOne(Users::className(), ['id' => 'id_user']);
+    }
 }

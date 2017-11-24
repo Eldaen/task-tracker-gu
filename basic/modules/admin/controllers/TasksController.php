@@ -3,10 +3,13 @@
 namespace app\modules\admin\controllers;
 
 use app\models\Teams;
+use app\models\TelegramSubscribe;
 use app\models\Users;
 use Yii;
 use app\models\Tasks;
 use app\models\TasksSearch;
+use yii\helpers\StringHelper;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -68,21 +71,19 @@ class TasksController extends Controller
         $model = new Tasks();
 
         //Получаем данные для соответсвия id - название
+        //Вот тут я еще не знал про hasMeny O___o, прошу не ругать
         $teams = Teams::find()->asArray()->all();
         $users = Users::find()->asArray()->all();
 
         //раз создали, то по дефолту открытое
         $model->status = 1;
+        $model->creator_id = Yii::$app->user->getIdentity()->getId();
 
-        //TODO:: убрать вот, после введения прав доступа
-        /*if(!Yii::$app->user->isGuest)
-        {
-            $model->creator_id = Yii::$app->user->identity->getId();
-        } else {
-            $model->creator_id = 0;
-        }*/
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            //Оповещаем юзера через Telegram, если подписан
+            $model->trigger(Tasks::EVENT_TASK_CREATED);
+            //$this->informUser($model);
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
@@ -101,6 +102,7 @@ class TasksController extends Controller
      */
     public function actionUpdate($id)
     {
+        //TODO: Можно бы добавить и сюда оповещалку в Телеграм, пока не буду.
         $model = $this->findModel($id);
         $users = Users::find()->asArray()->all();
 

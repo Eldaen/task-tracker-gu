@@ -13,6 +13,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <article class="tasksReport" style="margin-top: 30px;">
     <p>Здесь отображены все ваши текущие задачи</p>
+    <div class="alert alert-info">Если вы вдруг хотите получать обновления ваших задач через Telegram, то перейдите по <a style="color: #CC0000; font-weight: 600" href="https://telegram.me/GUTasksBot">ССЫЛКЕ</a> И пошлите боту команду
+        <span style="color: #CC0000; font-weight: 600">/sub <?=Yii::$app->user->getIdentity()->username?></span>.
+    </div>
     <? //TODO:: http://www.webapplex.ru/postranichnaya-navigacziya-v-yii-2.x ?>
     <div class="list-group">
         <? foreach ($tasks as $item) : ?>

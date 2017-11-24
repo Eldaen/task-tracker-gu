@@ -78,8 +78,8 @@ $config = [
             ],
         ],
         'bot' => [
-                'class' => 'SonkoDmitry\Yii\TelegramBot\Component',
-                'apiToken' => $token,
+            'class' => 'SonkoDmitry\Yii\TelegramBot\Component',
+            'apiToken' => $token,
         ],
 
         'authManager' => [
