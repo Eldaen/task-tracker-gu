@@ -71,7 +71,6 @@ class TasksController extends Controller
         $model = new Tasks();
 
         //Получаем данные для соответсвия id - название
-        //Вот тут я еще не знал про hasMeny O___o, прошу не ругать
         $teams = Teams::find()->asArray()->all();
         $users = Users::find()->asArray()->all();
 

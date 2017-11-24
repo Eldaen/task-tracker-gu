@@ -31,14 +31,14 @@ $this->params['breadcrumbs'][] = $this->title;
             //TODO: да и время можно бы переводить в читаемое
             [
                 'attribute' => 'Creator',
-                'value'     => function ($searchModel) {
-                    return \app\models\Users::findOne(['id' => $searchModel->creator_id])->username;
+                'value'     => function ($data) {
+                    return $data->creator->username;
                 },
             ],
             [
                 'attribute' => 'Executor',
-                'value'     => function ($searchModel) {
-                    return \app\models\Users::findOne(['id' => $searchModel->executor_id])->username;
+                'value'     => function ($data) {
+                    return $data->executor->username;
                 },
             ],
             'created_at:datetime',

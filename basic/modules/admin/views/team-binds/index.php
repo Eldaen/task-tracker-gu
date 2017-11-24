@@ -26,14 +26,14 @@ $this->params['breadcrumbs'][] = $this->title;
 
             [
                 'attribute' => 'Username',
-                'value'     => function ($searchModel) {
-                    return \app\models\Users::findOne(['id' => $searchModel->user_id])->username;
+                'value'     => function ($data) {
+                    return $data->user->username;
                 },
             ],
             [
                 'attribute' => 'Team',
-                'value'     => function ($searchModel) {
-                    return \app\models\Teams::findOne(['id' => $searchModel->team_id])->name;
+                'value'     => function ($data) {
+                    return $data->team->name;
                 },
             ],
 
