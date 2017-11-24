@@ -41,7 +41,8 @@ AppAsset::register($this);
 
             ['label' => 'Команды', 'url' => ['/team/index']],
             ['label' => 'Задачи', 'url' => ['/tasks/index']],
-            ['label' => 'Одминка(dev)', 'url' => ['/admin/stats-report/index']],
+            //Через меню helper от mdm тоже сделать не вышло, пришлось через can :(
+            Yii::$app->user->can('AdminPanelAccess') ? ['label' => 'Одминка(dev)', 'url' => ['/admin/stats-report/index']] : '',
             //TODO: что-то не понял как собрать то что ниже в одну тернарную конструкцию
             Yii::$app->user->isGuest ? (
                 ['label' => 'Login', 'url' => ['/site/login']]

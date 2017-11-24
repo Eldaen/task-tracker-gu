@@ -1,9 +1,7 @@
 <?php
 
 use yii\helpers\Html;
-/* @var $allTasks array */
-/* @var $closedTasks array */
-/* @var $overdueTasks array */
+/* @var $tasks array */
 
 $this->title = "Открытые задачи";
 $this->params['breadcrumbs'][] = $this->title;
@@ -27,7 +25,15 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="col-md-6"><h4 class="list-group-item-heading"><?=HTML::encode($item->title)?></h4>
                         <p class="list-group-item-text"><?=HTML::encode($item->body)?></p></div>
                     <?php //TODO:: доделать тут вывод данных о тасках deadline ?>
-                    <div class="col-md-6"></div>
+                    <div class="col-md-6">
+                        <div class="col-md-6">
+                            <p class="list-group-item-text"><span class="font-weight-bold">Deadline:</span> <?=date('Y-m-d', $item->deadline)?></p>
+                            <p class="list-group-item-text">Команда: <?=$item->team->name?></p></div>
+                        <div class="col-md-6">
+                            <p class="list-group-item-text">Создатель: <?=$item->creator->username?></p>
+                            <p class="list-group-item-text">Исполнитель: <?=$item->executor->username?></p>
+                        </div>
+                    </div>
                 </div>
             </a>
         <? endforeach; ?>

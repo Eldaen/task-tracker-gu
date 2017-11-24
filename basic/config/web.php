@@ -2,6 +2,7 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
+$token = require __DIR__. '/telegram_token.php';
 
 $config = [
     'id' => 'basic',
@@ -76,6 +77,10 @@ $config = [
             'rules' => [
             ],
         ],
+        'bot' => [
+                'class' => 'SonkoDmitry\Yii\TelegramBot\Component',
+                'apiToken' => $token,
+        ],
 
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\DbManager'
@@ -85,7 +90,8 @@ $config = [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
-            'site/*'
+            'site/*',
+            'gii/*'
         ]
     ],
 ];
