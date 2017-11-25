@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4233e12-311f-4512-8117-44808444d2e2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/modules/admin/views/tasks/index.php" afterPath="$PROJECT_DIR$/basic/modules/admin/views/tasks/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/modules/admin/views/team-binds/index.php" afterPath="$PROJECT_DIR$/basic/modules/admin/views/team-binds/index.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/basic/views/site/requestPasswordResetToken.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/basic/views/site/resetPassword.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/config/web.php" afterPath="$PROJECT_DIR$/basic/config/web.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/views/site/index.php" afterPath="$PROJECT_DIR$/basic/views/site/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/basic/views/site/login.php" afterPath="$PROJECT_DIR$/basic/views/site/login.php" />
     </list>
     <ignored path="tasks.local.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,103 +72,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TasksController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/modules/admin/controllers/TasksController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1107">
-              <caret line="91" column="33" lean-forward="false" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
-              <folding>
-                <element signature="e#49#70#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TelegramSubscribe.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/models/TelegramSubscribe.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="563">
-              <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tasks.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/models/Tasks.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-369">
-              <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/modules/admin/views/tasks/index.php">
+        <entry file="file://$PROJECT_DIR$/basic/views/site/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
+            <state relative-caret-position="272">
+              <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/modules/admin/views/tasks/create.php">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/views/site/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="578">
+              <caret line="44" column="94" lean-forward="false" selection-start-line="44" selection-start-column="94" selection-end-line="44" selection-end-column="94" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/modules/admin/views/tasks/_form.php">
+      <file leaf-file-name="SiteController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/controllers/SiteController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="512">
+              <caret line="112" column="30" lean-forward="false" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/modules/admin/views/team-binds/index.php">
+      <file leaf-file-name="web.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/basic/config/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="189">
+              <caret line="92" column="20" lean-forward="false" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/basic/modules/admin/views/teams/index.php">
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/basic/config/db.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TeamBinds.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/models/TeamBinds.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-539">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic/modules/admin/views/tasks/view.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-185">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -189,8 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/basic/config/test.php" />
-        <option value="$PROJECT_DIR$/basic/controllers/StatsReportController.php" />
         <option value="$PROJECT_DIR$/basic/tests/acceptance/ReportCest.php" />
         <option value="$PROJECT_DIR$/basic/migrations/reambe.md" />
         <option value="$PROJECT_DIR$/basic/tests/acceptance.suite.yml" />
@@ -231,15 +181,17 @@
         <option value="$PROJECT_DIR$/basic/migrations/m171123_184327_create_telegramm_subscribe_table.php" />
         <option value="$PROJECT_DIR$/basic/migrations/m171123_184337_create_telegramm_offset_table.php" />
         <option value="$PROJECT_DIR$/basic/migrations/m171123_184156_create_telegramm_message_table.php" />
-        <option value="$PROJECT_DIR$/basic/config/web.php" />
         <option value="$PROJECT_DIR$/basic/config/console.php" />
         <option value="$PROJECT_DIR$/basic/commands/TelegramController.php" />
         <option value="$PROJECT_DIR$/basic/models/TelegramSubscribe.php" />
         <option value="$PROJECT_DIR$/basic/views/tasks/active.php" />
         <option value="$PROJECT_DIR$/basic/models/Tasks.php" />
-        <option value="$PROJECT_DIR$/basic/modules/admin/controllers/TasksController.php" />
         <option value="$PROJECT_DIR$/basic/modules/admin/views/tasks/index.php" />
         <option value="$PROJECT_DIR$/basic/modules/admin/views/team-binds/index.php" />
+        <option value="$PROJECT_DIR$/basic/modules/admin/controllers/TasksController.php" />
+        <option value="$PROJECT_DIR$/basic/views/site/index.php" />
+        <option value="$PROJECT_DIR$/basic/views/site/login.php" />
+        <option value="$PROJECT_DIR$/basic/config/web.php" />
       </list>
     </option>
   </component>
@@ -274,7 +226,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,63 +255,13 @@
               <item name="tasks.local" type="b2602c69:ProjectViewProjectNode" />
               <item name="tasks.local" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="basic" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tasks.local" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasks.local" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="basic" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tasks.local" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasks.local" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="basic" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tasks.local" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasks.local" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="basic" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="tasks.local" type="b2602c69:ProjectViewProjectNode" />
               <item name="tasks.local" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="basic" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tasks.local" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasks.local" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="basic" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tasks" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tasks.local" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasks.local" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="basic" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="team-binds" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="tasks.local" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tasks.local" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="basic" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="admin" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="teams" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="tasks.local" type="b2602c69:ProjectViewProjectNode" />
@@ -372,13 +274,13 @@
               <item name="tasks.local" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="basic" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="tasks" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="site" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -517,12 +419,13 @@
       <workItem from="1511339263227" duration="49000" />
       <workItem from="1511345402663" duration="602000" />
       <workItem from="1511440984626" duration="7570000" />
-      <workItem from="1511518446661" duration="17236000" />
+      <workItem from="1511518446661" duration="17278000" />
+      <workItem from="1511595803559" duration="1051000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118023000" />
+    <option name="totallyTimeSpent" value="119116000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -537,10 +440,9 @@
     <frame x="6" y="0" width="1918" height="1158" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30624327" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30947256" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294347" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294347" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="106" y="100" width="1718" height="958" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14639397" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -551,6 +453,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="106" y="100" width="1718" height="958" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294347" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -598,54 +501,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/basic/models/TasksReport.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/TasksSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-695">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/TeamBindsSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/Teams.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-695">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/Users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1001">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1273">
-          <caret line="86" column="7" lean-forward="true" selection-start-line="86" selection-start-column="7" selection-end-line="86" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basic/models/TeamsSearch.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-559">
@@ -679,14 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="563">
           <caret line="117" column="24" lean-forward="false" selection-start-line="117" selection-start-column="24" selection-end-line="117" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/config/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -758,11 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#27#0#PHP" expanded="false" />
-            <marker date="1511446460395" expanded="true" signature="93:146" ph="{...}" />
-            <marker date="1511446460395" expanded="true" signature="275:294" ph="[...]" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -784,7 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2">
           <caret line="53" column="54" lean-forward="false" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -792,7 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -807,7 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="34" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -822,7 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -830,7 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="7" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,15 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/config/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -902,10 +730,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="113">
           <caret line="15" column="161" lean-forward="false" selection-start-line="15" selection-start-column="161" selection-end-line="15" selection-end-column="161" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#article#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#div#0;n#article#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -919,41 +744,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/basic/modules/admin/views/tasks/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-185">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic/models/TelegramSubscribe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/basic/models/Tasks.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-369">
+        <state relative-caret-position="680">
           <caret line="43" column="61" lean-forward="false" selection-start-line="43" selection-start-column="61" selection-end-line="43" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic/modules/admin/controllers/TasksController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1107">
-          <caret line="91" column="33" lean-forward="false" selection-start-line="91" selection-start-column="33" selection-end-line="91" selection-end-column="33" />
-          <folding>
-            <element signature="e#49#70#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/basic/modules/admin/views/tasks/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
+        <state relative-caret-position="663">
           <caret line="40" column="52" lean-forward="false" selection-start-line="40" selection-start-column="52" selection-end-line="40" selection-end-column="52" />
           <folding />
         </state>
@@ -977,7 +784,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/basic/models/TeamBinds.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-539">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -985,8 +792,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/basic/modules/admin/views/team-binds/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="527">
+          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -995,6 +802,88 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/modules/admin/controllers/TasksController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="72" column="55" lean-forward="false" selection-start-line="72" selection-start-column="55" selection-end-line="72" selection-end-column="55" />
+          <folding>
+            <element signature="e#49#70#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/models/TelegramSubscribe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="47" column="29" lean-forward="false" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/site/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="10" lean-forward="false" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/site/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="44" column="94" lean-forward="false" selection-start-line="44" selection-start-column="94" selection-end-line="44" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/site/requestPasswordResetToken.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/site/resetPassword.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/views/site/error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/controllers/SiteController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="112" column="30" lean-forward="false" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/config/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="92" column="20" lean-forward="false" selection-start-line="92" selection-start-column="20" selection-end-line="92" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/basic/config/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
