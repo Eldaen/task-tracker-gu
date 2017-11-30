@@ -184,7 +184,7 @@ class Tasks extends \yii\db\ActiveRecord
         };
         $myFields['team_name'] = $myFields['team_id'];
         unset($myFields['team_id']);
-        
+
         return $myFields;
     }
 
