@@ -12,10 +12,12 @@ class m171110_101314_create_foreign_keys extends Migration
      */
     public function safeUp()
     {
-        $this->addForeignKey('fk_creator_id', '{{%tasks}}', 'creator_id', '{{%users}}', 'id' );
-        $this->addForeignKey('fk_team_id', '{{%tasks}}', 'team_id', '{{%teams}}', 'id' );
-        $this->addForeignKey('fk_team_bind_team_id', '{{%team_binds}}', 'team_id', '{{%teams}}', 'id' );
-        $this->addForeignKey('fk_team_bind_user_id', '{{%team_binds}}', 'user_id', '{{%users}}', 'id' );
+//        $this->addForeignKey('fk_creator_id', '{{%tasks}}', 'creator_id', '{{%users}}', 'id' );
+//        $this->addForeignKey('fk_team_id', '{{%tasks}}', 'team_id', '{{%teams}}', 'id' );
+//        $this->addForeignKey('fk_team_bind_team_id', '{{%team_binds}}', 'team_id', '{{%teams}}', 'id' );
+//        $this->addForeignKey('fk_team_bind_user_id', '{{%team_binds}}', 'user_id', '{{%users}}', 'id' );
+        // $this->addForeignKey('fk_executor_id', '{{%tasks}}', 'executor_id', '{{%users}}', 'id' );
+
     }
 
     /**
@@ -23,11 +25,13 @@ class m171110_101314_create_foreign_keys extends Migration
      */
     public function safeDown()
     {
-        $this->dropForeignKey('fk_creator_id', '{{%tasks}}');
-        $this->dropForeignKey('fk_team_id', '{{%teams}}');
-        $this->dropForeignKey('fk_team_bind_team_id', '{{%team_binds}}');
-        $this->dropForeignKey('fk_team_bind_user_id', '{{%team_binds}}');
+//        $this->dropForeignKey('fk_creator_id', '{{%tasks}}');
+//        $this->dropForeignKey('fk_team_id', '{{%teams}}');
+//        $this->dropForeignKey('fk_team_bind_team_id', '{{%team_binds}}');
+//        $this->dropForeignKey('fk_team_bind_user_id', '{{%team_binds}}');
+       // $this->dropForeignKey('fk_executor_id', '{{%tasks}}');
     }
+}
 
     /*
     // Use up()/down() to run migration code without a transaction.
@@ -42,5 +46,5 @@ class m171110_101314_create_foreign_keys extends Migration
 
         return false;
     }
-    */
+
 }
