@@ -166,5 +166,13 @@ class Tasks extends \yii\db\ActiveRecord
         )->one();
     }
 
+    public function fields()
+    {
+        $myFields = parent::fields();
+//        $myFields['creator_id'] = $this->creator->username;
+//        $myFields['team_id'] = $this->team->name;
+        return $myFields;
+    }
+
 
 }

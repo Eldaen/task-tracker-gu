@@ -291,11 +291,11 @@ child</ColNames>
     <index id="86" parent="25" name="fk_creator_id">
       <ColNames>creator_id</ColNames>
     </index>
-    <index id="87" parent="25" name="fk_team_id">
-      <ColNames>team_id</ColNames>
-    </index>
-    <index id="88" parent="25" name="fk_executor_id">
+    <index id="87" parent="25" name="fk_executor_id">
       <ColNames>executor_id</ColNames>
+    </index>
+    <index id="88" parent="25" name="fk_team_id">
+      <ColNames>team_id</ColNames>
     </index>
     <key id="89" parent="25" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>

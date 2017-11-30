@@ -33,9 +33,9 @@ $config = [
             'layout' => 'admin',
             'defaultRoute' => 'stats-report/index'
         ],
-        /*'utility' => [
+        'utility' => [
             'class' => 'c006\utility\migration\Module',
-        ],*/
+        ],
     ],
     'components' => [
         'request' => [
@@ -90,7 +90,8 @@ $config = [
     'as access' => [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
-            'site/*'
+            'site/*',
+            'tasks-rest/*'
         ]
     ],
 ];
