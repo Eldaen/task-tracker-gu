@@ -166,11 +166,25 @@ class Tasks extends \yii\db\ActiveRecord
         )->one();
     }
 
+    //Делаем чтобы отображались не ID, а названия
     public function fields()
     {
         $myFields = parent::fields();
-//        $myFields['creator_id'] = $this->creator->username;
-//        $myFields['team_id'] = $this->team->name;
+
+        $myFields['creator_id'] = function()
+        {
+            return $this->creator->username;
+        };
+        $myFields['creator_name'] = $myFields['creator_id'];
+        unset($myFields['creator_id']);
+
+        $myFields['team_id'] = function()
+        {
+            return $this->team->name;
+        };
+        $myFields['team_name'] = $myFields['team_id'];
+        unset($myFields['team_id']);
+        
         return $myFields;
     }
 
